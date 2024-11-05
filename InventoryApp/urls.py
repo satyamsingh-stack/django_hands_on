@@ -21,5 +21,7 @@ from items.views import *
 urlpatterns = [
     path('inventory/items/',ItemCreate.as_view(),name='items-create'),
     path('inventory/items/<int:pk>/',ItemCreate.as_view(),name='items-update'),
+    path('inventory/sort/',SortQuery.as_view(),name='sort'),
+    path('items/query/<str:category>/',Query.as_view(),name='category'),
     path('admin/', admin.site.urls),
 ]
